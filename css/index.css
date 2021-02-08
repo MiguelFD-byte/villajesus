@@ -1,0 +1,433 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+#check{
+    display:none;
+}
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:70px;
+    background:#fff;
+    box-shadow:0px 0px 20px;
+    z-index: 1;
+}
+
+header .logo{
+    color:#333;
+    font-size:1.8em;
+    position:absolute;
+    top:0.3em;
+    left:0.5em;
+    text-decoration:none;
+    
+}
+header .logo img{
+    height: 50px;
+}
+#btn-menu{
+    height:40px;
+    width:50px;
+    position:absolute;
+    top:1em;
+    right:0.5em;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    z-index: 1000;
+
+}
+
+#btn-menu span{
+    position:absolute;
+    content:'';
+    background:#333;
+    height:3px;
+    width:30px;
+    z-index: 1000;
+}
+#span1{
+    top:10px;
+}
+#span2{
+    top:18px;
+}
+#span3{
+    top:26px;
+}
+
+.menu{
+    position:absolute;
+    width:100%;
+    height:100vh;
+    left:-1370px;
+    transition:all 0.5s;
+    background:#228be6;
+    display:flex;
+    align-items:center;
+    justify-content:center;  
+}
+
+.menu ul{
+    width:100%;
+    margin-right:20px;
+    
+}
+.menu ul li{
+    list-style:none;
+    line-height:5em;
+    transition:all 1s;
+    display:flex;
+    justify-content:center;
+
+}
+.menu ul li a{
+    color:#fff;
+    font-size:1.4em;
+    text-decoration:none;
+    transition:all 1s;
+    font-family:sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+}
+.menu a:hover{
+    font-size:1.6em;
+    transition:all 1s;
+}
+
+.menu i{
+    color:#fff;
+    font-size:2em;
+    position:absolute;
+    top:0.5em;
+    left:20px;
+}
+
+#check:checked ~ #btn-menu #span1{
+    transform:rotate(-40deg);
+    top:21px;
+    background:#fff;
+}
+#check:checked ~ #btn-menu #span2{
+    transform:rotate(40deg);
+    top:21px;
+    background:#fff;
+}
+#check:checked ~ #btn-menu #span3{
+    transform:rotate(40deg);
+    top:21px;
+    background:#fff;
+}
+#check:checked ~ .menu{
+    left:0;
+}
+
+#picture{
+    opacity: 0;
+}
+
+#picture[data-scroll="in"]{
+    opacity: 1;
+    transition: all 2s;
+}
+
+#accordionExample{
+    transform: translateX(-1300px);
+}
+
+#accordionExample[data-scroll="in"]{
+    transform: translateX(0);
+    transition: all 1s;
+}
+
+/*media-querys*/
+@media(min-width:576px){
+    .direccion p{
+        font-size: 0.8em;
+    }
+}
+
+
+@media(min-width:768px){
+    header{
+        height: 100px;
+    }
+    header .logo img{
+        height: 80px;
+    }
+    .menu i{
+    font-size:3em;
+    }
+    .menu ul li a{
+    font-size:2.5em;
+    }
+    .menu ul li{
+    line-height:6em;
+    }
+    .menu ul{
+       
+    }
+    #btn-menu{
+    right:40px;
+    top: 30px;
+    height:50px;
+    }
+    #btn-menu span{
+    height:5px;
+    width:45px;
+    }
+    #span1{
+    top:10px;
+    }
+    #span2{
+    top:21px;
+    }
+    #span3{
+    top:32px;
+    }
+    .contenedor{
+        display: flex;
+        justify-content: center;
+    }
+    .contenedor .sociales{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .contenedor .sociales a{
+        
+    }
+    .contenedor .año{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .accordion button{
+        font-size: 0.8em;
+    }
+}
+
+
+@media(min-width:992px){
+    .accordion-body{
+        font-size: 1.2em;
+    }
+    .accordion button{
+        font-size: 0.8em;
+    }
+    .titulo-acordion{
+        font-size: 2.5em;
+        padding: 10px;
+    }
+    .contenedor .año{
+        font-size: 1.3em;
+    }
+    .contenedor .adress{
+        font-size: 1.4em;
+    }
+    .contenedor .direccion p{
+       font-size: 1em;
+    }
+    .contenedor .sociales {
+       font-size: 1.5em;
+    }
+    .activity{
+        font-size: 2.5em;
+    }
+}
+
+@media(min-width:1024px){
+    header{
+        height: 100px;
+    }
+    header .logo img{
+        height: 80px;
+    }
+    .menu i{
+    font-size:4em;
+    }
+    .menu ul li a{
+    font-size:4em;
+    }
+    .menu ul li{
+    line-height:10em;
+    }
+    #btn-menu{
+    right:40px;
+    top: 30px;
+    }
+    #btn-menu span{
+    height:5px;
+    width:50px;
+    }
+    #span1{
+    top:10px;
+    }
+    #span2{
+    top:23px;
+    }
+    #span3{
+    top:35px;
+    }
+}
+@media(min-width:1200px){
+    .menu ul li a{
+        font-size: 3em;
+    }
+    .menu ul li{
+        line-height: 8em;
+    }
+    .div{
+     margin-left: 80px;
+    }
+}
+
+
+
+@media(min-width:1360px){
+    #btn-menu span{
+        height: 2.5px;
+        width: 35px;
+    }
+    #btn-menu #span1{
+        top:1em;
+    }
+    #btn-menu #span2{
+        top: 1.5em;
+    }
+    #btn-menu #span3{
+        top: 2em;
+    }
+    .menu ul li a{
+        font-size: 2em;
+    }
+    .menu ul li{
+        line-height: 6em;
+    }
+    .menu i{
+        font-size: 3em;
+    }
+
+}
+
+
+/*slider*/
+.slider{
+	width: 100%;
+	margin: auto;
+    overflow: hidden;
+    margin-top: 70px; 
+}
+
+.slider  ul{
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: cambio 20s infinite;
+	animation-timing-function: ease; /*step start-parpadeo*/
+}
+
+.slider li{
+	width: 100%;
+    list-style: none;
+}
+
+.slider img{
+	width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+@keyframes cambio{
+	0% {margin-left: 0%;}
+	20% {margin-left: 0%;}
+
+	25% {margin-left:-100%;}
+	45% {margin-left:-100%;}
+
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+
+	75% {margin-left:  -300%;}
+	100% {margin-left: -300%;}
+
+}
+
+
+#acc{
+    border-color: #228be6;
+}
+#acbody{
+    background-color: #228be6;
+    color: #fff;
+}
+
+#acc:hover {
+    color: #228be6;
+}
+
+.modal-footer{
+    
+
+}
+footer{
+    width: 100%;
+}
+.contenedor{
+    width: 100%;
+    background: #333;
+    padding: 20px;
+    
+}
+.contenedor .sociales{
+    width: 100%;
+    display: flex;
+   
+}
+.contenedor .sociales a{
+    color: #fff;
+    font-size:1.5em;
+    text-decoration: none;
+    padding: 10px;
+    
+}
+.contenedor .año{
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.contenedor .año p{
+    font-size: 1em;
+    margin-top: 10px;
+}
+.contenedor .direccion{
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+   
+}
+.contenedor .direccion p{
+    max-width: 260px;
+    
+}
+.contenedor .direccion h2{
+   
+}
+.contenedor .direccion i{
+    font-size: 1em; 
+}
+
+.imagen{
+    height: 200px;  
+}
+
+#exampleModal{
+    top: 20%;
+    
+}
